@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">Coronavirus Tester</string>
+    <string name="action_info">Informazioni</string>
+    <string name="intro_fragment_label">Intro</string>
+
+    <string name="tester_fragment_label">Tester</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="intro">Scopri se hai il coronavirus, fai il test!</string>
+    <string name="do_test">Fai il test</string>
+    <string name="previous">Indietro</string>
+
+    <string name="touch_sensor">Appoggia il dito sul sensore per effettuare il test e mantieni premuto.</string>
+    <string name="scanning_finger">Sto rilevando i parametri vitali …</string>
+    <string name="repeat_scanning">Movimento del dito troppo veloce, ho bisogno di più tempo per rilevare i parametri vitali …</string>
+    <string name="can_release">E\' possibile rimuovere il dito dal sensore.</string>
+    <string name="elaborating_data">Sto elaborando i dati …</string>
+    <string name="coronavirus_positive">Sei risultato positivo al coronavirus!</string>
+    <string name="coronavirus_negative">Sei risultato negativo al coronavirus!</string>
+    <string name="error_performing_test">Ho riscontrato un errore durante lo svolgimento del test, ripeti il procedimento da capo.</string>
+
+    <string name="none"> </string>
+
+    <!-- Informations -->
+    <string name="info">Informazioni</string>
+    <string name="disclaimer">Disclaimer</string>
+    <string name="info_fake">
+        Questa applicazione è un fake e non rileva davvero se sei affetto da coronavirus o meno.
+        Il tester restitusce risultato positivo nell\'80% dei casi, negativo nel 20% dei casi.
+        Questa applicazione è stata realizzata in primo
+        luogo come esercizio per studiare le nuove versioni di android e l\'artchiettura view model,
+        in secondo luogo per fare un po\' di ironia su un argomento piuttosto serio.\n\n
+        Purtroppo, per quello che ho visto, l\'argomento viene spesso storpiato a più non posso
+        e inginantito o sminuto in base al pensiero di ogni individuo, senza stare ai fatti.\n\n
+        Ti prego di essere critico, di non credere a tutte le fake news e di rimanere informato
+        solamente da fonti ufficiali, stando attento a non cascare nella trappola dei giornalisti,
+        che le sparano una più grossa dell\'altra solo per fare ascolti.
+    </string>
+    <string name="credits_title">Credits</string>
+    <string name="credits">
+        Luca Parolari (@lparolari)\n\n
+        email: <a href="mailto:luca.parolari23@gmail.com">luca.parolari23@gmail.com</a>\n
+        github: <a href="https://github.com/lparolari">https://github.com/lparolari</a>
+    </string>
+    <string name="read_informations_q">Hai letto le informazioni su quest\'app?</string>
+    <string name="read">Leggi</string>
+</resources>
