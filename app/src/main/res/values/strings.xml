@@ -11,7 +11,7 @@
 
     <string name="touch_sensor">Appoggia il dito sul sensore per effettuare il test e mantieni premuto.</string>
     <string name="scanning_finger">Sto rilevando i parametri vitali …</string>
-    <string name="repeat_scanning">Movimento del dito troppo veloce, ho bisogno di più tempo per rilevare i parametri vitali …</string>
+    <string name="repeat_scanning">Movimento del dito troppo veloce, ho bisogno di più tempo per rilevare i parametri vitali.</string>
     <string name="can_release">E\' possibile rimuovere il dito dal sensore.</string>
     <string name="elaborating_data">Sto elaborando i dati …</string>
     <string name="coronavirus_positive">Sei risultato positivo al coronavirus!</string>

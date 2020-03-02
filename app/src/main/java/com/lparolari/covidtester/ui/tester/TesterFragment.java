@@ -26,6 +26,19 @@ public class TesterFragment extends Fragment {
     private TesterViewModel testerViewModel = new TesterViewModel();
     private Handler handler = new Handler(Looper.getMainLooper());
 
+    private Runnable dataElaborated = new TimerTask() {
+        @Override
+        public void run() {
+            testerViewModel.dataElaborated();
+        }
+    };
+    private Runnable canReleaseFinger = new Runnable() {
+        @Override
+        public void run() {
+            testerViewModel.canRelease();
+        }
+    };
+
     @Override
     public View onCreateView(
             LayoutInflater inflater, ViewGroup container,
@@ -52,13 +65,7 @@ public class TesterFragment extends Fragment {
                 info.setText(getString(testerFormState.getLabel()));
 
                 if (testerFormState.getPhase().equals(TesterFormState.ELABORATING_DATA)) {
-
-                    handler.postDelayed(new TimerTask() {
-                        @Override
-                        public void run() {
-                            testerViewModel.dataElaborated();
-                        }
-                    }, 5000);
+                    handler.postDelayed(dataElaborated, 5000);
                 }
             }
         });
@@ -68,17 +75,14 @@ public class TesterFragment extends Fragment {
 
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
+                handler.removeCallbacks(dataElaborated);
                 if (motionEvent.getAction() == MotionEvent.ACTION_DOWN) {
-                    handler.postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                            testerViewModel.canRelease();
-                        }
-                    }, SCANNING_TIME);
+                    handler.postDelayed(canReleaseFinger, SCANNING_TIME);
                     testerViewModel.scanningFinger();
                     firstTouch = System.currentTimeMillis();
                 }
                 if (motionEvent.getAction() == MotionEvent.ACTION_UP) {
+                    handler.removeCallbacks(canReleaseFinger);
                     long currentTouch = System.currentTimeMillis();
                     if (currentTouch - firstTouch >= 3000)
                         testerViewModel.fingerScanned();
